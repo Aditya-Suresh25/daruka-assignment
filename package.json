@@ -1,0 +1,7 @@
+{
+  "name": "darukaa-earth",
+  "private": true,
+  "scripts": {"dev": "npm --prefix frontend run dev", "build": "npm --prefix frontend run build", "lint": "npm --prefix frontend run lint", "typecheck": "npm --prefix frontend run typecheck", "format": "npm --prefix frontend run format", "test": "npm --prefix frontend run test", "prepare": "husky"},
+  "devDependencies": {"husky": "^9.1.7", "lint-staged": "^15.2.10"},
+  "lint-staged": {"frontend/**/*.{ts,tsx,css}": ["npm --prefix frontend exec prettier -- --check", "npm --prefix frontend run lint", "npm --prefix frontend run typecheck"], "backend/**/*.py": ["python -m ruff check backend", "python -m black --check backend"]}
+}
