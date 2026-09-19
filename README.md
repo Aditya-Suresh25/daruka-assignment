@@ -2,6 +2,8 @@
 
 Darukaa.Earth is an environmental intelligence workspace for managing carbon and biodiversity projects, mapping monitoring sites, and reading performance trends. It is designed as a credible demo platform with a clean path from synthetic data to real remote-sensing inputs.
 
+Demo Video : https://github.com/user-attachments/assets/eb390df0-a9eb-487f-8603-78e9dcf91516
+
 ## Features
 
 - JWT registration, login, persistent session, and administrator-protected routes.
