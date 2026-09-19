@@ -105,7 +105,7 @@ Husky and lint-staged run frontend lint/typecheck and backend Ruff/Black checks 
 
 ## Deployment
 
-Deploy the frontend to Vercel using [vercel.json](vercel.json), with `VITE_API_URL` and `VITE_MAPBOX_TOKEN` configured in the Vercel project. Deploy the backend to Render using [render.yaml](render.yaml), supply `DATABASE_URL`, `JWT_SECRET_KEY`, and `CORS_ORIGINS`, and run `python -m alembic -c backend/alembic.ini upgrade head` as a release command. Use a hosted PostgreSQL provider with PostGIS enabled. The repository includes deployment descriptors, but a public URL still requires connecting these services to your hosting accounts.
+Deploy the frontend to Vercel using [vercel.json](vercel.json), with `VITE_API_URL` and `VITE_MAPBOX_TOKEN` configured in the Vercel project. Deploy the backend to a Render free web service using [render.yaml](render.yaml), supply `DATABASE_URL`, `JWT_SECRET_KEY`, and `CORS_ORIGINS`, and use a hosted PostgreSQL provider with PostGIS enabled. The Render start command applies Alembic migrations before launching the API, avoiding Render's paid pre-deploy hook. A free external PostGIS database, such as a suitable Supabase project, is required because Render's own persistent PostgreSQL service is not part of the free web-service tier. The repository includes deployment descriptors, but a public URL still requires connecting these services to your hosting accounts.
 
 ## Architecture Decisions
 
